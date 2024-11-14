@@ -1,0 +1,100 @@
+/* General Settings */
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #90ee90; /* Warme Header-Farbe */
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #90ee90;
+    box-shadow: none; /* Entfernt das rote Leuchten */
+    outline: none;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.order-button {
+    background-color: #90ee90;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-button:hover {
+    background-color: #7ecb7e;
+    transform: scale(1.05);
+}
+
+p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: red;
+}
+
+/* Toppings Styling */
+.toppings-container div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.toppings-container label {
+    font-size: 1rem;
+}
+
+.stern {
+    color: red;
+}

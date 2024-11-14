@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="Style.css">   
+    <title>Pizzashop</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=RmoyFp1TZKAeQ4ZyEQXcJfPyi2ZKOkh2QpTFbYUQm3jqOLlqrUMDHm8qRzV4QDLROLCSORY6uE1nn8p4j1Tlx4ha3nt67EekAGky7D48ZhzbtILBemGWJn3UdeB1EVUoIar0C2rboYAqytZ2QbDgEzvnZmQowyuw-iNACQOmdv9hDuziRILZyI_plDMPTFfuIDv3V9YhIfv-sxuZ_Y-LwQ9MoGldspnwvVZ1M-9xkdvuet26ayfKYVqqc2wisaC-8mUQ69mL5eTqk-scW8BqZQ" charset="UTF-8"></script></head>
+<body>
+    <header>
+        <h1>Mirnes & Charly's Pizzeria</h1>
+    </header>
+
+
+    
+    <main>
+        <form action="Pizzashop.php" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="Vorname_Eingabefeld">Vorname <span class="stern">*</span></label>
+                <input type="text" id="Vorname_Eingabefeld" name="Vorname" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="Nachname_Eingabefeld">Nachname <span class="stern">*</span></label>
+                <input type="text" id="Nachname_Eingabefeld" name="Nachname" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="Adresse_Eingabefeld">Adresse <span class="stern">*</span></label>
+                <input type="text" id="Adresse_Eingabefeld" name="Adresse" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div> 
+
+            <div class="input-group">
+                <label for="PLZ_Eingabefeld">PLZ <span class="stern">*</span></label>
+                <input type="text" id="PLZ_Eingabefeld" name="PLZ" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="Ort_Eingabefeld">Ort <span class="stern">*</span></label>
+                <input type="text" id="Ort_Eingabefeld" name="Ort" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="Telefonnummer_Eingabefeld">Telefonnummer <span class="stern">*</span></label>
+                <input type="text" id="Telefonnummer_Eingabefeld" name="Telefonnummer" required placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="E-Mail_Eingabefeld">E-Mail</label>
+                <input type="email" id="E-Mail_Eingabefeld" name="E-Mail" placeholder="Ihre Eingabe hier" style="width: 90%;">
+            </div>
+
+            <div class="input-group">
+                <label for="Groesse_Eingabefeld">Größe</label>
+                <select id="Groesse_Eingabefeld" name="Groesse" onchange="berechneGesamtpreis()" style="width: 90%;">
+                    <option value="12.90">Klein (22cm) 12,90€</option>
+                    <option value="14.90" selected>Mittel (28cm) 14,90€</option>
+                    <option value="17.90">Groß (35cm) 17,90€</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="Art_Eingabefeld">Pizzaart <span class="stern">*</span></label>
+                <select id="Art_Eingabefeld" name="Art" style="width: 90%;">
+                    <option value="pizza1">Pizza Margherita</option>
+                    <option value="pizza2">Pizza Salami</option>
+                    <option value="pizza3">Pizza Hawaii</option>
+                    <option value="pizza4">Pizza Tonno</option>
+                    <option value="pizza5">Pizza Funghi</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="Anzahl_Eingabefeld">Anzahl der Pizzen</label>
+                <select id="Anzahl_Eingabefeld" name="Anzahl" onchange="berechneGesamtpreis()" style="width: 90%;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="Getraenke_Eingabefeld">Getränke</label>
+                <select id="Getraenke_Eingabefeld" name="Getraenke" onchange="berechneGesamtpreis()" style="width: 90%;">
+                    <option value="0">Kein Getränk</option>
+                    <option value="2.50">Mineralwasser (0,5L) 2,50€</option>
+                    <option value="3.00">Cola (0,5L) 3,00€</option>
+                    <option value="3.50">Fanta (0,5L) 3,50€</option>
+                    <option value="3.00">Sprite (0,5L) 3,00€</option>
+                    <option value="4.50">Bier (0,5L) 4,50€</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="Anzahl_Getraenke_Eingabefeld">Anzahl der Getränke</label>
+                <select id="Anzahl_Getraenke_Eingabefeld" name="Anzahl_Getraenke" onchange="berechneGesamtpreis()" style="width: 90%;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Zusätzliche Toppings:</label>
+                <div class="toppings-container" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <input type="checkbox" id="topping1" name="toppings" value="1.50" onchange="berechneGesamtpreis()" style="margin-right: 2px;">
+                        <label for="topping1">Mozzarella (1,50€)</label>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <input type="checkbox" id="topping2" name="toppings" value="2.00" onchange="berechneGesamtpreis()" style="margin-right: 2px;">
+                        <label for="topping2">Salami (2,00€)</label>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <input type="checkbox" id="topping3" name="toppings" value="1.80" onchange="berechneGesamtpreis()" style="margin-right: 2px;">
+                        <label for="topping3">Schinken (1,80€)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Gesamtpreis:</label>
+                <span id="gesamtpreis">0.00€</span>
+            </div>
+
+            <div class="input-group button-group">
+                <button type="submit" class="order-button">Bestellen</button>
+            </div>
+
+            <p>* Diese Felder sind Pflichtfelder</p>
+        </form>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
+
+
